@@ -26,6 +26,7 @@ extension UIColor {
   }
 }
 
+@available(iOS 13.0, *)
 extension Color {
   
   init(hex: UInt, alpha: Double = 1) {
@@ -50,9 +51,13 @@ extension Color {
     var b: CGFloat = 0
     var o: CGFloat = 0
     
-    guard NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o) else {
-      // You can handle the failure here as you want
-      return (0, 0, 0, 0)
+    if #available(iOS 14.0, *) {
+      guard NativeColor(self).getRed(&r, green: &g, blue: &b, alpha: &o) else {
+        // You can handle the failure here as you want
+        return (0, 0, 0, 0)
+      }
+    } else {
+      // Fallback on earlier versions
     }
     return (r, g, b, o)
   }
