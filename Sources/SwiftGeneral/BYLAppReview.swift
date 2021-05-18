@@ -32,7 +32,7 @@ public class BYLAppReview {
   private let showInTimesKey = "showInTimes"
   private let defaultTimes = [2, 4, 8]
   
-  var runCounts: Int {
+  public var runCounts: Int {
     get {
       return UserDefaults.standard.integer(forKey: runCountsKey)
     }
@@ -53,12 +53,12 @@ public class BYLAppReview {
   }
   
   
-  func setup(showInTimes: [Int]? = nil) {
+  public func setup(showInTimes: [Int]? = nil) {
     self.showInTimes = showInTimes ?? defaultTimes
     self.runCounts = 0
   }
   
-  func show(windowScene: UIWindowScene) {
+  public func show(windowScene: UIWindowScene) {
     #if DEBUG
     print("BYLAppReview: runCounts = \(runCounts)" )
     #endif
