@@ -27,7 +27,7 @@ extension UIColor {
 }
 
 @available(iOS 13.0, *)
-extension Color {
+public extension Color {
   
   init(hex: UInt, alpha: Double = 1) {
     self.init(
@@ -81,5 +81,5 @@ extension Color {
     let tintBlue = self.components.blue + (1.0 - self.components.blue) * degree
     return Color(.sRGB, red: Double(tintRed), green: Double(tintGreen), blue: Double(tintBlue), opacity: alpha)
   }
-
+  
 }
