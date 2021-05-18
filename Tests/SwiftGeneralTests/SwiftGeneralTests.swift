@@ -1,7 +1,7 @@
 import XCTest
 @testable import BYLGeneral
 
-final class BYLGeneralTests: XCTestCase {
+final class SwiftGeneralTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct

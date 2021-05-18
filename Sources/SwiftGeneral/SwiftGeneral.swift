@@ -1,3 +1,3 @@
-struct BYLGeneral {
+struct SwiftGeneral {
     var text = "Hello, World!"
 }
