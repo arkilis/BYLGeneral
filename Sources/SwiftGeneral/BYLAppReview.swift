@@ -26,7 +26,7 @@ import StoreKit
 
 public class BYLAppReview {
   
-  static let shared = BYLAppReview()
+  public static let shared = BYLAppReview()
   
   private let runCountsKey = "runCounts"
   private let showInTimesKey = "showInTimes"
