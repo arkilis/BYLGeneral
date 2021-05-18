@@ -27,7 +27,7 @@ extension UIColor {
 }
 
 @available(iOS 13.0, *)
-public extension Color {
+extension Color {
   
   init(hex: UInt, alpha: Double = 1) {
     self.init(
